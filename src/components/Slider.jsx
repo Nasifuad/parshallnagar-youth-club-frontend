@@ -2,14 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-// Sample images array (replace with actual assets)
-const images = [
-  "./assets/images/prize.jpg",
-  "/assets/images/drug.jpg",
-  "/assets/images/football.jpg",
-];
-
+import { award, prize, prize2, drug, football } from "../assets";
 export default function ImageSlider() {
   const settings = {
     dots: true,
@@ -20,7 +13,7 @@ export default function ImageSlider() {
     autoplay: true,
     autoplaySpeed: 3000,
   };
-
+  const images = [award, prize, prize2, drug, football];
   return (
     <div className="container mx-auto py-12">
       <Slider {...settings}>

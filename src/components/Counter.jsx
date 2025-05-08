@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 const stats = [
-  { label: "Members", value: 120 },
-  { label: "Events Held", value: 45 },
-  { label: "Projects Completed", value: 30 },
+  { label: "Members", value: 70 },
+  { label: "Events Held", value: 5 },
+  { label: "Social Work", value: 30 },
 ];
 
 export default function Counter() {

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
+import { logo } from "../assets";
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
@@ -8,30 +8,18 @@ const links = [
 
 export default function Navbar() {
   return (
-    <motion.nav
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="fixed w-full bg-white shadow-lg z-10"
-    >
-      <div className="container mx-auto flex justify-between items-center p-4">
-        <span className="text-2xl font-bold text-blue-600">Youth Club</span>
-        <div className="space-x-6">
-          {links.map(({ to, label }) => (
-            <NavLink
-              key={to}
-              to={to}
-              className={({ isActive }) =>
-                isActive
-                  ? "text-blue-600 font-semibold"
-                  : "text-gray-700 hover:text-blue-500"
-              }
-            >
-              {label}
-            </NavLink>
-          ))}
-        </div>
+    <div className="flex items-center justify-between container">
+      <div className="flex items-center gap-2">
+        <img src={logo} alt="logo" className="w-16 rounded-full" />
+        <h1 className="text-xl">Parshallnagar Youth club</h1>
       </div>
-    </motion.nav>
+      <div className="flex justify-center items-center gap-4">
+        {links.map((link) => (
+          <NavLink key={link.to} to={link.to}>
+            {link.label}
+          </NavLink>
+        ))}
+      </div>
+    </div>
   );
 }
