@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { logo } from "../assets";
@@ -5,7 +6,7 @@ import { useState } from "react";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
+  { to: "/about", label: "About Youth Club" },
   { to: "/dashboard", label: "Dashboard" },
 ];
 
@@ -38,7 +39,7 @@ export default function Navbar() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden xl:flex items-center space-x-6">
             {links.map((link) => (
               <NavLink
                 key={link.to}

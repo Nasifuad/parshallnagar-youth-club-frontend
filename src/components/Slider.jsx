@@ -62,7 +62,7 @@ export default function PerspectiveSlider() {
               <img
                 src={src}
                 alt={`slide-${index}`}
-                className="w-full h-full object-cover absolute inset-0" // Changed to object-cover
+                className="w-full  h-full object-cover absolute inset-0"
                 style={{
                   transform:
                     index < activeSlide
