@@ -7,7 +7,7 @@ import { useState } from "react";
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Youth Club" },
-  { to: "/dashboard", label: "Dashboard" },
+  { to: "/members", label: "Members" },
 ];
 
 export default function Navbar() {
